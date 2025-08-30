@@ -1,0 +1,115 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(to bottom, #0f2027, #203a43, #2c5364);
+  color: #f4f4f4;
+  padding: 20px;
+  position: relative;
+}
+
+.background-overlay {
+  background-image: url('bg.jpg'); /* optional background image */
+  background-size: cover;
+  background-position: center;
+  opacity: 0.07;
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  z-index: 0;
+}
+
+header {
+  background: rgba(0, 0, 0, 0.6);
+  padding: 20px;
+  overflow: hidden;
+  margin-bottom: 20px;
+  position: relative;
+  z-index: 1;
+  border-radius: 10px;
+}
+
+.photo-box {
+  float: left;
+  width: 100px;
+  height: 100px;
+  margin-right: 20px;
+}
+
+.photo-box img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  border: 2px solid #4fc3f7;
+}
+
+.name-box {
+  float: left;
+  margin-top: 20px;
+}
+
+.name-box h1 {
+  font-size: 1.8em;
+  color: #4fc3f7;
+}
+
+.name-box p {
+  color: #ccc;
+  font-size: 1rem;
+}
+
+nav {
+  float: right;
+  margin-top: 40px;
+}
+
+.tab {
+  background: transparent;
+  border: 2px solid #4fc3f7;
+  padding: 6px 12px;
+  margin-left: 8px;
+  color: #fff;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: 0.3s;
+}
+
+.tab:hover {
+  background: #4fc3f7;
+  color: #101010;
+}
+
+.tab.active {
+  background: #4fc3f7;
+  color: #101010;
+}
+
+.content {
+  background: rgba(0, 0, 0, 0.5);
+  padding: 20px;
+  border-radius: 8px;
+  position: relative;
+  z-index: 1;
+}
+
+.pane {
+  display: none;
+}
+
+.pane.active {
+  display: block;
+}
+
+h2 {
+  color: #4fc3f7;
+  margin-bottom: 10px;
+  border-bottom: 2px solid #4fc3f7;
+  padding-bottom: 5px;
+}
+
+ul {
+  margin-left: 2
+

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Dharavath Yamuna | Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div class="background-overlay"></div>
+
+  <header>
+    <div class="photo-box">
+      <img src="profile.jpg" alt="Yamuna Photo" />
+    </div>
+    <div class="name-box">
+      <h1>Dharavath Yamuna</h1>
+      <p>B.Tech 3rd Year | CSE | Anurag University</p>
+    </div>
+    <nav>
+      <button class="tab active" data-tab="home">Home</button>
+      <button class="tab" data-tab="projects">Projects</button>
+      <button class="tab" data-tab="skills">Skills</button>
+      <button class="tab" data-tab="contact">Contact</button>
+    </nav>
+  </header>
+
+  <div class="content">
+    <section id="home" class="pane active">
+      <h2>About Me</h2>
+      <p>I’m Dharavath Yamuna, currently pursuing B.Tech in Computer Science at Anurag University.</p>
+      <p>I enjoy solving problems, building websites, and learning new technologies in full-stack development and AI.</p>
+    </section>
+
+    <section id="projects" class="pane">
+      <h2>Projects</h2>
+      <ul>
+        <li><strong>Portfolio Website:</strong> A clean, modern design using HTML & CSS only (box model).</li>
+        <li><strong>Chatbot:</strong> Python chatbot using NLP libraries for basic conversation.</li>
+        <li><strong>Library Management System:</strong> A console-based Java app for book management.</li>
+      </ul>
+    </section>
+
+    <section id="skills" class="pane">
+      <h2>Skills</h2>
+      <ul>
+        <li>HTML, CSS (box model), JavaScript (basics)</li>
+        <li>Java, Python, MySQL</li>
+        <li>DSA in Java</li>
+        <li>React.js (Beginner level)</li>
+      </ul>
+    </section>
+
+    <section id="contact" class="pane">
+      <h2>Contact</h2>
+      <p>Email: dharavathyamuna@example.com</p>
+      <p>Phone: +91 12345 67890</p>
+    </section>
+  </div>
+
+
+  <script>
+    const tabs = document.querySelectorAll('.tab');
+    const panes = document.querySelectorAll('.pane');
+    tabs.forEach(tab => {
+      tab.addEventListener('click', () => {
+        tabs.forEach(btn => btn.classList.remove('active'));
+        panes.forEach(pane => pane.classList.remove('active'));
+        tab.classList.add('active');
+        document.getElementById(tab.dataset.tab).classList.add('active');
+      });
+    });
+  </script>
+
+</body>
+</html>
+
